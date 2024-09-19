@@ -1,0 +1,515 @@
+/* General Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .doctor--filters {
+    width: 25%;
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+  
+  .cardiac-container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .search-results-summary {
+    margin: 50px;
+  }
+  
+  .doctor--card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Doctor Card Styles */
+  .doctor--card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .doctor--card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .doctor--card-body {
+    padding: 20px;
+  }
+  
+  .doctor--card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .doctor--card-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .doctor--card-info {
+    flex: 1;
+  }
+  
+  .doctor--card-name {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .doctor--card-name:hover {
+    text-decoration: underline;
+  }
+  
+  .doctor--card-specialization {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .doctor--card-details {
+    margin-bottom: 15px;
+  }
+  
+  .doctor--card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .doctor--card-availability {
+    font-size: 14px;
+    color: #28a745;
+  }
+  
+  .doctor--card-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .doctor--card-button:hover {
+    background-color: #041c36;
+  }
+  
+  /* Filter Sidebar Styles */
+  .filter--title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #070707;
+    margin-bottom: 20px;
+  }
+  
+  .filter--item {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+  }
+  
+  .filter--item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter--tab {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0c0c0c;
+    font-weight: 500;
+  }
+  
+  .filter--apply-btn-container {
+    position: sticky;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .filter--apply-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter--apply-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dashboard-container {
+      flex-direction: column;
+    }
+  
+    .doctor--filters,
+    .cardiac-container {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .doctor--card-container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  
+    .doctor--card-img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+
+
+  /* Dropdown Styles */
+
+
+  
+/* Container for sidebar filter */
+.dashboard-container {
+    padding: 20px;
+    margin-left: -50px;
+  }
+  
+  /* Filter dropdown container */
+  .doctor--filters {
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: auto;
+    
+
+  }
+  
+  /* Filter header title */
+  .filter--title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Filter tabs container */
+  .doctor--filters-tabs {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  /* Filter tab styling */
+  .filter--item {
+    margin-bottom: 10px;
+  }
+  
+  .filter--tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  }
+  
+  .filter--tab:hover {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .filter--arrow {
+    font-size: 1rem;
+  }
+  
+  .filter--dropdown {
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 5px;
+  }
+  
+  .filter--dropdown-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .filter--dropdown-item:last-child {
+    border-bottom: none;
+  }
+  
+  .filter--dropdown-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Show dropdown when open */
+  .filter--item .filter--dropdown {
+    display: block;
+  }
+  
+  .filter--apply-btn-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .filter--apply-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .filter--apply-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+
+  /* General container for the whole section */
+.book-appoint-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa; /* Light background */
+    padding: 50px 20px;
+  }
+  
+  /* Banner Section */
+  .banner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .banner-content {
+    max-width: 600px;
+  }
+  
+  .banner-title {
+    font-size: 42px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease;
+  }
+  
+  .banner-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease;
+  }
+  
+  .banner-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: slideInRight 1.5s ease;
+  }
+  
+  /* Search Section */
+  .search-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .search-title {
+    font-size: 32px;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: bounceIn 1.5s ease;
+  }
+  
+  /* Search Box Container */
+  .search-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .search-input {
+    width: 70%;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .search-input:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  }
+  
+  .search-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounceIn {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  /* Styles for large screens and above */
+#doctor-desktop-filter {
+  display: block;
+}
+
+.search-results-summary,
+.doctor--card-container {
+  margin-top: 20px;
+}
+
+/* Styles for mobile large screens and below */
+@media (max-width: 992px) {
+  #doctor-desktop-filter {
+    display: none; /* Hide filters on mobile */
+  }
+
+  .search-results-summary {
+    order: 1; /* Place the search results summary above the filters on mobile */
+  }
+
+  .cardiac-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .doctor--card-container {
+    margin-top: 20px;
+  }
+  
+  /* Adjust the search input and filter section for mobile view */
+  .filter--item {
+    margin-bottom: 10px;
+  }
+}
+
+/* Base styles for the search box container */
+.search-box-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust spacing as needed */
+}
+
+/* Styles for the search input */
+.search-input {
+  flex: 1; /* Allows input to take up available space */
+}
+
+/* Styles for the search button */
+.search-button {
+  /* Add any button-specific styles here */
+}
+
+/* Media query for mobile large and below */
+@media (max-width: 992px) {
+  .search-box-container {
+    flex-direction: column; /* Stack input and button vertically */
+  }
+  
+  .search-button {
+    margin-top: 10px; /* Add spacing between input and button */
+  }
+}
