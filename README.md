@@ -2,12 +2,24 @@
 
 ## Team Members
 
-![Team](./screenshots/Vijay.JPEG "Vijay")
-**Vijaykumar V**
-![Team](./screenshots/Karupu.jpg "Karrupiah")
-**Karrupiah C**
-![Team](./screenshots/Sanjai.jpg "Sanjai")
-**Sanjai J**
+<div style="display: flex; justify-content: space-around; margin-top: 20px;">
+
+<div style="text-align: center;">
+  <img src="./screenshots/Vijay.JPEG" alt="Vijaykumar V" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;"/>
+  <h3>Vijaykumar V</h3>
+</div>
+
+<div style="text-align: center;">
+  <img src="./screenshots/Karupu.jpg" alt="Karrupiah C" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;"/>
+  <h3>Karrupiah C</h3>
+</div>
+
+<div style="text-align: center;">
+  <img src="./screenshots/Sanjai.jpg" alt="Sanjai J" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;"/>
+  <h3>Sanjai J</h3>
+</div>
+
+</div>
 
 
 
