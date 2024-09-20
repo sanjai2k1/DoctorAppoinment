@@ -85,7 +85,7 @@ const AppoimentsCrud = () => {
   }, [appointments]);
 
   const handleAction = async (appointment, action) => {
-    console.log(action);
+    // console.log(action);
     setSelectedAppointment(appointment);
     setModalAction(action);
     setShowModal(true);
@@ -94,7 +94,7 @@ const AppoimentsCrud = () => {
   const handleModalConfirm = () => {
     if (selectedAppointment && modalAction) {
       const updatedStatus = modalAction === "confirm" ? "Booked" : "Cancelled";
-      console.log(selectedAppointment);
+      // console.log(selectedAppointment);
       const formData = new FormData();
       formData.append("status", updatedStatus);
       formData.append("DoctorId", selectedAppointment.doctorId);

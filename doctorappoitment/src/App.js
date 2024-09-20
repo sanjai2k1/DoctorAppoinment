@@ -47,7 +47,7 @@ function App() {
               <a href="/" className="logo-container">
                 <img
                   alt="SVK Hospital logo"
-                  fetchPriority="high"
+                  fetchpriority="high"
                   width="185"
                   height="90"
                   decoding="async"

@@ -1,5 +1,18 @@
 # Doctor Appointment System
 
+## Team Members
+
+![Team](./screenshots/Vijay.JPEG "Vijay")
+**Vijaykumar V**
+![Team](./screenshots/Karupu.jpg "Karrupiah")
+**Karrupiah C**
+![Team](./screenshots/Sanjai.jpg "Sanjai")
+**Sanjai J**
+
+
+
+
+
 ## Project Overview
 The **Doctor Appointment System** is a web-based application designed to simplify the process of booking and managing doctor appointments. It consists of three main modules:
 1. **Patients**

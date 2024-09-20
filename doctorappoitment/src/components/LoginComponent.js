@@ -62,7 +62,7 @@ const LoginComponent = () => {
         password: password,
         role: role,
       });
-      console.log(response);
+      // console.log(response);
       if (response.status === 200) {
         setSuccess("Login successful!");
         setError("");

@@ -163,7 +163,7 @@ const PatientEditComponent = () => {
   });
 
   useEffect(() => {
-    console.log(patients);
+    // console.log(patients);
     if (patients) {
       const base64String = `data:image/jpeg;base64,${patients.image}`;
 

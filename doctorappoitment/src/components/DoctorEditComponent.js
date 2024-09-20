@@ -201,7 +201,7 @@ const DoctorEditComponent = () => {
   });
 
   useEffect(() => {
-    console.log(doctors);
+    // console.log(doctors);
     if (doctors) {
       const base64String = `data:image/jpeg;base64,${doctors.imageData}`;
       const file = base64ToImageFile(base64String, "photo.jpg");

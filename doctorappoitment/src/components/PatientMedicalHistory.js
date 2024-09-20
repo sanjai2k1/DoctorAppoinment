@@ -44,7 +44,7 @@ const PatientMedicalHistory = () => {
     useEffect(()=>{
       const getmedicalHistory = async ()=>{
         const response = await DbService.get(`Bookings/medicalhistory/${id}`,{},sessionStorage.getItem("token"))
-        console.log(response.data.value["$values"])
+        // console.log(response.data.value["$values"])
         setMedicalhistory(response.data.value["$values"])
     }
         getmedicalHistory();

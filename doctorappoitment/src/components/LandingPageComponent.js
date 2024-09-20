@@ -109,35 +109,37 @@ const LandingPageComponent = () => {
         </Container>
       </div>
 
-  <Container className="my-5">
-        <Slider {...settings}>
-          {doctorData.map((doctor, index) => (
-            <div key={index}>
-              <Card className="doctor-card">
-                <Card.Img
-                  variant="top"
-                  src={doctor.imgSrc}
-                  alt={`Doctor ${index + 1}`}
-                />
-                <Card.Body>
-                  <Card.Title>{doctor.name}</Card.Title>
-                  <Card.Text>
-                    <strong>{doctor.achievement}</strong><br />
-                    <strong>{doctor.property}</strong><br />
-                    <div className="star-rating">
-                    {'★'.repeat(5).split('').map((star, i) => (
-                      <span key={i} className="star">{star}</span>
-                    ))}
-                  </div>
-                    <span className="note"> {doctor.note}</span>
-                  </Card.Text>
-                  
-                </Card.Body>
-              </Card>
-            </div>
-          ))}
-        </Slider>
-      </Container>
+      <Container className="my-5">
+  <Slider {...settings}>
+    {doctorData.map((doctor, index) => (
+      <div key={index}>
+        <Card className="doctor-card">
+          <Card.Img
+            variant="top"
+            src={doctor.imgSrc}
+            alt={`Doctor ${index + 1}`}
+          />
+          <Card.Body>
+            <Card.Title>{doctor.name}</Card.Title>
+            <Card.Text>
+              <strong>{doctor.achievement}</strong>
+              <br />
+              <strong>{doctor.property}</strong>
+              <br />
+              <span className="star-rating">
+                {Array.from({ length: 5 }, (_, i) => (
+                  <span key={i} className="star">★</span>
+                ))}
+              </span>
+              <span className="note">{doctor.note}</span>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+      </div>
+    ))}
+  </Slider>
+</Container>
+
 
       <Container>
       <div className="heading">

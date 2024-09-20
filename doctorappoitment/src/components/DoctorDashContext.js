@@ -71,7 +71,7 @@ export const DoctorProvider = ({ children }) => {
 
   const handleLogout = () => {
     console.log("Logged out");
-    sessionStorage.clear();
+    // sessionStorage.clear();
     navigate("/login");
   };
 

@@ -194,7 +194,7 @@ const DoctorBookingList = () => {
           {},
           sessionStorage.getItem("token")
         );
-        console.log(response);
+        // console.log(response);
         SetDoctorbookingData(response.data);
       } catch (error) {
         console.error("Error fetching doctor data:", error);
