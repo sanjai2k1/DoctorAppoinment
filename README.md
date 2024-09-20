@@ -2,7 +2,7 @@
 
 ## Team Members
 
-<div style="display: flex; justify-content: space-around; margin-top: 20px;">
+<div style="display: flex; justify-content: space-around; align-items: center; margin-top: 20px;">
 
 <div style="text-align: center;">
   <img src="./screenshots/Vijay.JPEG" alt="Vijaykumar V" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;"/>
@@ -20,6 +20,7 @@
 </div>
 
 </div>
+
 
 
 
